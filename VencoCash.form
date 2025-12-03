@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.company.VencoCash">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="12" column-count="21" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="1477" height="633"/>
+    </constraints>
+    <properties>
+      <background color="-4948258"/>
+      <foreground color="-1315"/>
+      <visible value="true"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="d8124" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Freestyle Script" size="48" style="1"/>
+          <foreground color="-12647576"/>
+          <text value=" K e l a s "/>
+        </properties>
+      </component>
+      <component id="2cec3" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="5" column="1" row-span="2" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Freestyle Script" size="48" style="1"/>
+          <foreground color="-12647576"/>
+          <text value=" N a m a "/>
+        </properties>
+      </component>
+      <component id="25881" class="javax.swing.JComboBox" binding="comboBox1" default-binding="true">
+        <constraints>
+          <grid row="3" column="2" row-span="1" col-span="9" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-12647576"/>
+          <font name="DialogInput" size="20" style="1"/>
+          <foreground color="-4948258"/>
+          <model/>
+        </properties>
+      </component>
+      <component id="d3d81" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Freestyle Script" size="48" style="1"/>
+          <foreground color="-12647576"/>
+          <text value=" B u l a n "/>
+        </properties>
+      </component>
+      <component id="7abd2" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Freestyle Script" size="48" style="1"/>
+          <foreground color="-12647576"/>
+          <text value=" J u m l a h "/>
+        </properties>
+      </component>
+      <component id="59364" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Freestyle Script" size="48" style="1"/>
+          <foreground color="-12647576"/>
+          <text value=" V i a "/>
+        </properties>
+      </component>
+      <component id="be2d7" class="javax.swing.JComboBox" binding="comboBox2" default-binding="true">
+        <constraints>
+          <grid row="8" column="2" row-span="1" col-span="9" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-12647576"/>
+          <editable value="false"/>
+          <font name="DialogInput" size="20" style="1"/>
+          <foreground color="-4948258"/>
+          <model/>
+        </properties>
+      </component>
+      <component id="964f3" class="javax.swing.JComboBox" binding="comboBox3" default-binding="true">
+        <constraints>
+          <grid row="4" column="2" row-span="1" col-span="9" vsize-policy="0" hsize-policy="2" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-12647576"/>
+          <font name="DialogInput" size="20" style="1"/>
+          <foreground color="-4948258"/>
+          <model/>
+        </properties>
+      </component>
+      <component id="1040" class="javax.swing.JComboBox" binding="comboBox4" default-binding="true">
+        <constraints>
+          <grid row="5" column="2" row-span="2" col-span="9" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-12647576"/>
+          <editable value="false"/>
+          <font name="DialogInput" size="20" style="1"/>
+          <foreground color="-4948258"/>
+          <model/>
+        </properties>
+      </component>
+      <component id="b14b1" class="javax.swing.JLabel" binding="tanggal">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Freestyle Script" size="48" style="1"/>
+          <foreground color="-12647576"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="0"/>
+          <text value=" T a n g g a l "/>
+        </properties>
+      </component>
+      <component id="cecf7" class="javax.swing.JComboBox" binding="comboBox5" default-binding="true">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="9" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-12647576"/>
+          <font name="DialogInput" size="20" style="1"/>
+          <foreground color="-4948258"/>
+          <model/>
+        </properties>
+      </component>
+      <vspacer id="f7a76">
+        <constraints>
+          <grid row="0" column="14" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="2bb3d">
+        <constraints>
+          <grid row="11" column="14" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <hspacer id="1abd4">
+        <constraints>
+          <grid row="3" column="20" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="1dacb">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <component id="c6733" class="javax.swing.JFormattedTextField" binding="jumlahField">
+        <constraints>
+          <grid row="7" column="2" row-span="1" col-span="9" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-12647576"/>
+          <font name="DialogInput" size="20" style="1"/>
+          <foreground color="-4948258"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="6c73c" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="4" row-span="1" col-span="6" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Ravie" size="72" style="3"/>
+          <foreground color="-12647576"/>
+          <text value=" VENCO CASH "/>
+          <visible value="true"/>
+        </properties>
+      </component>
+      <vspacer id="b28be">
+        <constraints>
+          <grid row="10" column="4" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <component id="3a67b" class="javax.swing.JButton" binding="lihatTabelButton" default-binding="true">
+        <constraints>
+          <grid row="9" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-12647576"/>
+          <font name="DialogInput" size="20" style="1"/>
+          <foreground color="-4948258"/>
+          <text value="Lihat Tabel"/>
+        </properties>
+      </component>
+      <component id="71e99" class="javax.swing.JButton" binding="simpanButton" default-binding="true">
+        <constraints>
+          <grid row="9" column="6" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-12647576"/>
+          <font name="DialogInput" size="20" style="1"/>
+          <foreground color="-4948258"/>
+          <text value="Simpan"/>
+        </properties>
+      </component>
+      <component id="938b7" class="javax.swing.JButton" binding="keluarButton" default-binding="true">
+        <constraints>
+          <grid row="9" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-12647576"/>
+          <font name="DialogInput" size="20" style="1"/>
+          <foreground color="-4948258"/>
+          <text value="Keluar"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
