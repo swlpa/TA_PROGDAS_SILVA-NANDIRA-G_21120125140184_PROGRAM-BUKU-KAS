@@ -10,6 +10,7 @@ import java.awt.Color;
 import java.awt.Font;
 
 public class VencoCash {
+
     public JPanel mainPanel;
     public JComboBox<String> comboBox5; // Tanggal
     public JComboBox<String> comboBox1; // Bulan
@@ -32,11 +33,6 @@ public class VencoCash {
         put("B", Arrays.asList("Abel Hidayat", "Adika Brahmana Rafi Sejati", "Akbar Maulana", "Bayhaqi Danurendra Naryo", "Bayu Seno Aji", "Daffa Abiyu Murdani", "Dafiq Mafaaza Mukti", "Danish Aqila Warganegara", "Devin Raihan Ferynaldo", "Difa Yusuf Adryan", "Erlangga Tirtamadani", "Fadhil Dzaki Faiz", "Farrell Athallah Vembrianto", "Fathur Arya Susena", "Fatih Adianta Hutomo", "Favian Farrel Anggara", "Fikhar AlHadi Faza", "Fulviansyah Galang Clianta", "FX. Pedro Novrianto Simbolon", "Ghamar Mahija Destama", "Imaduddin Faiz", "Jorvan Gavino", "Kautsar Naiyl Septa", "Lenita Ayuningtias", "Macauley Maheina Richard Handoko", "Muhamad Faisal Rahman", "Muhammad Ghozian Putra Barikan", "Muhammad Habib", "Muhammad Rafli Kurniawan", "Muhammad Yusuf Sintara", "Muhammad Zaki Anwar Firdaus", "Nadine Qotrunada", "Naila Afika", "Naufal Rafee Abgary", "Noven Miletano Argani Herlambang", "Okto Paul Barlin Damanik", "Paian Jonathan Situmorang", "Prabowo Adhiyatma", "Putri Oktaviani", "Radhitya Kurnia Asmara", "Raditya Adrian Nugraha", "Raihan Faiq Pratama", "Rakyan Bhumi Nagari", "Raya Nur Fikri", "Raziq Ihsan Ansori", "Sabrina Anindya Wulandari", "Sabrina Haqni Naura Arif", "Safwa Zafira Kinasih", "Sifia Engga Fahsyenka", "Sultan Gustin Ritonga", "Victo Haidar Pramudya"));
         put("C", Arrays.asList("Cici", "Cahya", "Candra"));
         put("D", Arrays.asList("Deni", "Dita", "Damar"));
-    }};
-
-    private final Map<Integer> tanggalBulan = new HashMap<>() {{
-        put("Januari", for (int i = 1; i <= 31; i++) comboBox5.addItem(String.valueOf(i));)
-
     }};
 
     public VencoCash() {
@@ -70,36 +66,39 @@ public class VencoCash {
         comboBox3.addItem("C");
         comboBox3.addItem("D");
 
-        //via
+        // isi comboBox via
         comboBox2.removeAllItems();
         comboBox2.addItem("Cash");
         comboBox2.addItem("QRIS");
 
-        //bulan
+        // listener bulan
         comboBox1.addItemListener(e -> {
             if (e.getStateChange() == ItemEvent.SELECTED) {
-                int bulanDipilih = comboBox1.getSelectedItem().toString();
-                currentRow[1] = bulanDipilih;
+                int maxDays;
 
-                comboBox5.removeAllItems();
-                List<Integer>  listTanggal = tanggalBulan.get(bulanDipilih);
-                if (ListTanggal != null) {
-                    for (int n : ListTanggal) {
-                        comboBox5.addItem(n);
-                    }
+                String bulanDipilih = comboBox1.getSelectedItem().toString();
+
+                if (bulanDipilih.equals("Februari")) {
+                    maxDays = 28;
+                } else {
+                    maxDays = 31;
                 }
+                comboBox5.removeAllItems();
+                for (int i = 1; i <= maxDays; i++) {
+                    comboBox5.addItem(String.valueOf(i));
+                }
+                currentRow[1] = bulanDipilih;
             }
         });
 
-        //tanggal
+        // listener tanggal
         comboBox5.addItemListener(e -> {
             if (e.getStateChange() == ItemEvent.SELECTED) {
                 currentRow[0] = comboBox5.getSelectedItem().toString();
-
             }
         });
 
-        // via
+        // listener via
         comboBox2.addItemListener(e -> {
             if (e.getStateChange() == ItemEvent.SELECTED) {
                 currentRow[5] = comboBox2.getSelectedItem().toString();
@@ -130,13 +129,29 @@ public class VencoCash {
         });
 
         // listener jumlah
+        // listener jumlah
         jumlahField.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusLost(java.awt.event.FocusEvent e) {
-                String jumlah = jumlahField.getText();
-                if (jumlah != null && !jumlah.isEmpty()) {
-                    currentRow[4] = jumlah;
+
+            // Cegah input huruf saat diketik
+            public void keyTyped(java.awt.event.KeyEvent e) {
+                char c = e.getKeyChar();
+                if (!Character.isDigit(c) && c != '\b' && c != 127) {
+                    e.consume();
                 }
             }
+
+            // Validasi ketika fokus hilang
+            public void focusLost(java.awt.event.FocusEvent e) {
+                String t = jumlahField.getText();
+                if (t != null && !t.isEmpty()) {
+                    t = t.replace("Rp","").replace(".","").replace(",","").trim();
+                    if (!t.matches("\\d+")) {
+                        JOptionPane.showMessageDialog(mainPanel, "Jumlah harus angka!");
+                        jumlahField.setText("");
+                    }
+                }
+            }
+
         });
 
         // tombol simpan
@@ -153,10 +168,9 @@ public class VencoCash {
                     .replace(",", "")
                     .trim();
 
-            //pengkondisian
             if (tanggal == null || tanggal.trim().isEmpty() ||
                     bulan   == null || bulan.trim().isEmpty()   ||
-                    jumlah  == null || jumlah.trim().isEmpty()  ||
+                    jumlah  == null || jumlah.trim().isEmpty() ||
                     kelas   == null || kelas.trim().isEmpty()   ||
                     nama    == null || nama.trim().isEmpty()) {
 
@@ -168,8 +182,8 @@ public class VencoCash {
             String[] row = {tanggal, bulan, kelas, nama, jumlah, via};
             dataKas.add(row);
             tableModel.addRow(row);
-            DataStore.saveData(); // simpan ke file
             jumlahField.setText("");
+            DataStore.saveData(); // simpan ke file
         });
 
         // tombol lihat tabel
@@ -200,7 +214,6 @@ public class VencoCash {
 
     public static void main(String[] args) {
         DataStore.loadData(); // load data dari file
-
         JFrame frame = new JFrame("VencoCash");
         frame.setContentPane(new VencoCash().mainPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
